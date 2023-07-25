@@ -38,7 +38,7 @@ export default function OtherDiagnositicDependant(props) {
         </div>
         <div>
           <label>
-            trach
+            Trach
             <CustomCheckInput
               className={styles.symptomDiv}
               type="checkbox"

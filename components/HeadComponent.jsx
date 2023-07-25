@@ -69,7 +69,8 @@ function HealthOddsCalculator(props) {
   const [acuityMessage, setAcuityMessage] = useState("");
   const [alertStyles, setAlertStyles] = useState("");
   const [alertText, setAlertText] = useState("");
-  const [marginBottom, setMarginBottom ] = useState("")
+  const [marginBottom, setMarginBottom] = useState("")
+  const [percentage, setPercentage] = useState(0)
 
   let disable =
     patientData.stroke === false &&
@@ -86,7 +87,7 @@ function HealthOddsCalculator(props) {
     const numbers = Object.values(patientData)
       .filter((value) => typeof value === "string")
       .reduce((sum, value) => sum + parseInt(value), 0);
-    
+    calculateTheProbability(numbers)
   
 
     if (numbers > 0 && numbers <= 80) {
@@ -110,6 +111,12 @@ function HealthOddsCalculator(props) {
     }
     setImprovementOdds(numbers);
   };
+
+  const calculateTheProbability = (points) => {
+    const percentage = Math.floor((points / 250) * 100);
+    setPercentage(percentage)
+  };
+
 
   const handleInputChange = (event) => {
     const { name, value, type, checked } = event.target;
@@ -181,7 +188,7 @@ function HealthOddsCalculator(props) {
   return (
     <div className={styles["health-odds-calculator"]}>
       <div className={styles.textGuide}>
-        <small>Calculates Scores from (0-170): </small>
+        <small>Calculates Scores from (0-250): </small>
         <br />
         <small>Higher the number, higher the risk! </small>
       </div>
@@ -228,6 +235,7 @@ function HealthOddsCalculator(props) {
                   value={patientData.motorFunctionStroke}
                   onChange={handleInputChange}
                 >
+                  
                   {MedicalInfo[0].motorFunctions.map((motor) => {
                     return (
                       <CustomOptionInput
@@ -240,6 +248,7 @@ function HealthOddsCalculator(props) {
                   })}
                 </select>
               </div>
+          
               <MedicalCondition
                 name="comorbiditiesStroke"
                 comorbidityNum="1"
@@ -854,7 +863,7 @@ function HealthOddsCalculator(props) {
           </div>
           <div className={styles["odds-results"]}>
             <p>Rehab Assessment score: {`${improvementOdds}`}</p>
-            <p>Possible LOA odds : {`${improvementOdds}`} </p>
+            <p>Chance of failure: {`${percentage}%`} </p>
             <p>{acuityMessage}</p>
           </div>
         </>

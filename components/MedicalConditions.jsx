@@ -17,10 +17,9 @@ export default function MedicalCondition(props) {
             return (
               <CustomOptionInput
                 key={comorbidity.id}
+                id={comorbidity.id}
                 name={comorbidity.name}
                 value={comorbidity.value}
-              
-                
              
               />
             );

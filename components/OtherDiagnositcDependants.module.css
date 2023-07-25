@@ -1,0 +1,14 @@
+.symptomList {
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  text-align: center;
+}
+.symptomList div {
+  text-align: center;
+  padding: 1px;
+}
+.symptomList div label {
+  text-align: center;
+  padding: 1px;
+}

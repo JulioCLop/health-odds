@@ -1,0 +1,44 @@
+html,
+body {
+   padding: 0;
+   margin: 0;
+   font-size: 22px;
+   font-family: Allan-regular, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background: hsl(186, 49%, 52%);
+    margin: 0px;
+ 
+}
+ ::-webkit-scrollbar{
+  display: none;
+ }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+:root{
+  --main-text-color: #fff;
+  --secondary-text-color: #5f5555;
+}
+
+
+@font-face {
+  font-family: 'Allan-Bold';
+  font-style: normal;
+  font-weight: 500;
+  src: url(/fonts/Allan-regular.ttf) format('truetype');
+}
+ 
+@font-face {
+  font-family: 'Allan-regular';
+  font-style: normal;
+  font-weight: 600;
+  src: url(/fonts/Allan-Bold.ttf) format('truetype');
+}

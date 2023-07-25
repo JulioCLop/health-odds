@@ -1,0 +1,48 @@
+[{
+    "motorFunctions": [{
+        "id": 1,
+        "value": "10",
+        "name": "Motor Level"
+    },{
+        "id":2,
+        "value": "5",
+        "name": "Independant Mobility"
+    },{
+        "id":4,
+        "value": "8",
+        "name": "Modified Independance Mobility"
+    },{
+        "id":5,
+        "value": "10",
+        "name": "Assisted Mobility"
+    },{
+        "id":6,
+        "value": "12",
+        "name": "Stand-By Assistance"
+    },{
+        "id":7,
+        "value": "18",
+        "name": "Contact Guard Assistance"
+    },{
+        "id":8,
+        "value": "20",
+        "name": "Minimal Contact Assistance"
+    },{
+        "id":9,
+        "value": "25",
+        "name": "Moderate Assistance"
+    },{
+        "id":10,
+        "value": "32",
+        "name": "Max Assistance"
+    },{
+        "id":11,
+        "value": "38",
+        "name": "Wheelchair Mobility"
+    },{
+        "id":12,
+        "value": "45",
+        "name": "Bed Mobility"
+    }
+]
+}]

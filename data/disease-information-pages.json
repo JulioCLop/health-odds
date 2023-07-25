@@ -1,0 +1,58 @@
+[
+    {
+        "id": "stroke",
+        "assess": "Stroke is a critical medical emergency requiring quick action to recognize symptoms such as facial drooping, arm weakness, slurred speech (F.A.S.T.), and distinguish between ischemic and hemorrhagic strokes. Risk factors like hypertension, high cholesterol, smoking, diabetes, obesity. Immediate medical attention, thrombolytic therapy, clot retrieval, and rehabilitation aid in minimizing brain damage and regaining lost abilities.",
+        "detail": "Stroke rehabilitation eligibility is determined by factors such as the severity of the stroke, the patient's medical stability, and the time since the stroke occurred. Patients must be willing and motivated to actively participate in therapy, setting functional goals for their recovery. The assessment also considers the patient's cognitive function, medical history, and the availability of a supportive social network.",
+        "image": "/static/camilo-jimenez-OermHGSUzhI-unsplash.jpg",
+        "websiteUrl": ""
+
+    },
+    {
+        "id": "tbi",
+        "assess": "Traumatic Brain Injury (TBI) requires a comprehensive assessment by qualified healthcare professionals, including neurologists or neurosurgeons. Prompt medical attention is crucial if one experiences head injury symptoms like loss of consciousness, confusion, headache, or changes in behavior. The assessment typically involves a detailed medical history review, neurological examination, and potentially neuroimaging tests like CT scans or MRIs. Cognitive and functional tests may also be conducted to assess memory, attention, language, and other cognitive abilities affected by the injury. Early detection and appropriate care are vital for improved outcomes in cases of TBI.",
+        "detail": "Eligibility for Traumatic Brain Injury (TBI) rehabilitation involves factors like medical stability, functional limitations resulting from the brain injury, patient's willingness to participate, cognitive function assessment, safety considerations, and insurance coverage. The interdisciplinary team designs individualized treatment plans to enhance the patient's quality of life and functional independence, targeting rehabilitation goals specific to TBI recovery.",
+        "image": "/static/national-cancer-institute-BDKid0yJcAk-unsplash.jpg",
+        "websiteUrl": ""
+
+    },
+    {
+        "id": "neuro",
+        "assess": "A neurological assessment involves evaluating the nervous system to identify abnormalities or neurological disorders. It includes taking the patient's medical history, assessing cognitive function, cranial nerve examination, motor function and coordination tests, sensory function evaluation, gait examination, and reflex testing. Additional tests like brain imaging, EEG, or nerve conduction studies may be ordered based on the patient's symptoms and suspected neurological conditions. The assessment helps healthcare professionals make accurate diagnoses and develop appropriate treatment plans for neurological disorders.",
+        "detail": "Neuro patients qualify for rehabilitation based on their neurological condition, functional limitations, and medical stability. The assessment considers rehabilitation goals, cognitive function, and the patient's willingness to participate actively. Social support, insurance coverage, age, and overall health are also taken into account. The interdisciplinary rehabilitation team aims to optimize functional independence, improve daily activities, and enhance the patient's overall well-being through individualized care and therapeutic interventions.",
+        "image": "/static/hal-gatewood-OgvqXGL7XO4-unsplash.jpg",
+        "websiteUrl": ""
+
+    },
+    {
+        "id": "ortho",
+        "assess": "The orthopedic assessment evaluates the musculoskeletal system for injuries or conditions. It involves history taking, physical examination, range of motion and strength testing, and specific orthopedic tests. Palpation helps identify tenderness and swelling, while imaging studies like X-rays or MRI provide detailed images. Based on the findings, a diagnosis is made, and a treatment plan is developed to improve musculoskeletal function and quality of life.",
+        "detail": "Orthopedic patients qualify for rehabilitation based on their musculoskeletal condition, functional limitations, and medical stability. Assessing rehabilitation goals, willingness to participate, and social support are vital considerations. Post-operative patients who have undergone orthopedic surgeries, such as joint replacements or spine surgeries, often benefit from rehabilitation to aid in recovery and regain mobility. The multidisciplinary rehabilitation team aims to optimize musculoskeletal function, reduce pain, and enhance the patient's overall quality of life through individualized and comprehensive care.",
+        "image": "/static/harlie-raethel-ouyjDk-KdfY-unsplash.jpg",
+        "websiteUrl": ""
+
+    },
+    {
+        "id": "cardiac",
+        "assess": "A cardiac assessment evaluates the cardiovascular system for abnormalities. It includes medical history, physical examination, blood pressure measurement, heart rate and rhythm evaluation, and auscultation to detect irregularities or murmurs. Additional tests such as ECG, stress testing, echocardiogram, and blood tests help diagnose cardiac conditions and assess heart health and risk factors. The goal is to accurately diagnose cardiac conditions and develop appropriate treatment plans to manage or prevent cardiovascular disease.",
+        "detail": "Cardiac patients qualify for rehabilitation based on their heart condition, medical stability, and functional status. Early initiation of rehabilitation after a cardiac event or procedure is beneficial for improved outcomes. Rehabilitation aims to optimize cardiovascular health, enhance exercise capacity, and reduce the risk of future cardiac events. The program is tailored to each patient's specific goals and needs, involving a multidisciplinary team of healthcare professionals to provide comprehensive and individualized care.",
+        "image": "/static/robina-weermeijer-NIuGLCC7q54-unsplash.jpg",
+        "websiteUrl": ""
+
+    },
+    {
+        "id": "pulmonary",
+        "assess": "A pulmonary assessment evaluates the respiratory system for abnormalities. It includes medical history, physical examination, lung function tests, and arterial blood gas analysis to assess lung capacity, gas exchange, and oxygenation. Imaging studies like chest X-rays or CT scans may be used to visualize the lungs, and exercise tolerance tests may be performed to assess respiratory and cardiovascular function during physical activity. The goal is to accurately diagnose respiratory conditions, evaluate lung function, and develop appropriate treatment plans to manage or improve respiratory health.",
+        "detail": "Pulmonary patients qualify for rehabilitation based on their respiratory condition, medical stability, and functional status. Rehabilitation aims to improve exercise tolerance, overall respiratory function, and quality of life. The program is tailored to individual rehabilitation goals and may accommodate oxygen therapy if needed. Pulmonary rehabilitation involves a multidisciplinary team of healthcare professionals providing exercise training, breathing exercises, education, and psychological support to empower patients in managing their respiratory health and enhancing daily activities.",
+        "image": "/static/robina-weermeijer-Pw9aFhc92P8-unsplash.jpg",
+        "websiteUrl": ""
+
+    },
+    {
+        "id": "burns",
+        "assess": "A burn assessment evaluates the extent and severity of the burn injury, including burn type, depth, size, and location on the body. It assesses associated injuries, circulation, sensation, and the risk of infection. The assessment guides treatment decisions, such as wound care, pain management, fluid resuscitation, and possible surgical intervention. Early and effective assessment is crucial for providing timely and appropriate care to burn victims.",
+        "detail": "Burn patients qualify for rehabilitation based on burn severity, medical stability, and functional limitations. Rehabilitation aims to improve functional independence, physical and psychological well-being, and scar management. Early initiation of rehabilitation can optimize outcomes, and specialized programs may address psychosocial needs. The multidisciplinary team provides individualized care, including physical therapy, scar management, pain management, and psychosocial support, to help patients regain strength, mobility, and confidence during the recovery process.",
+        "image": "/static/elias-maurer-sSpLu7IPC8g-unsplash.jpg",
+        "websiteUrl": ""
+
+    }
+]

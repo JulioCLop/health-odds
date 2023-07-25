@@ -1,0 +1,235 @@
+
+
+/* Stroke container */
+.strokeContainer {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 1rem;
+}
+.textGuide{
+  color: rgba(0, 0, 0, 0.78);
+}
+.strokeContainerMargin{
+  margin-bottom: 0rem;
+}
+.strokeContainer label {
+  font-weight: bold;
+  text-align: left;
+  padding-left: 2.5rem;
+  width: 65%;
+}
+.strokeContainer input {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  width: 50%;
+}
+
+/* checkbox styles */
+.strokeContainer input[type="checkbox"] {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border: 1.7px solid #555;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Hover and focus styles */
+.strokeContainer input:hover,
+.strokeContainer input:focus {
+  border-color: #007bff;
+}
+
+/* Placeholder text style */
+.strokeContainer input::placeholder {
+  color: #999;
+}
+
+/* Disabled input style */
+.strokeContainer input:disabled {
+  background-color: #f1f1f1 !important;
+  cursor: not-allowed;
+}
+.health-odds-calculator {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  -webkit-box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.health-odds-calculator h2 {
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+
+.health-odds-calculator label {
+  display: block;
+  font-weight: bold;
+  color: #555;
+}
+.selectStyles {
+  background-color: rgba(128, 128, 128, 0.046);
+  outline: none;
+}
+.selectStyles option {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  padding: 100px;
+}
+.selectStyles:focus {
+  border: none;
+  border: 2px solid #007bff;
+}
+.selectStyles option:checked {
+  border: none;
+}
+.selectStyles option:active {
+  border: none;
+}
+
+
+.health-odds-calculator input,
+.health-odds-calculator select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.health-odds-calculator button {
+  display: inline-block;
+  margin: 5px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.health-odds-calculator button:hover {
+  background-color: #0056b3;
+}
+
+.health-odds-calculator .odds-result {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.health-odds-calculator .odds-result p {
+  margin-bottom: 5px;
+  color: var(--secondary-text-color);
+}
+
+.health-odds-calculator .odds-result p:first-child {
+  color: #00cc00;
+}
+
+.health-odds-calculator .odds-result p:last-child {
+  color: #ff0000;
+}
+
+.health-odds-calculator-title {
+  color: var(--secondary-text-color);
+  text-align: center;
+}
+.mainContainer {
+  padding-top: 15px;
+}
+
+/* Flag Alerts */
+.redFlagAlert {
+  margin-top: 8px;
+  height: 45px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 0, 0, 0.639);
+  border-radius: 4px;
+}
+.redFlagAlert p {
+  color: white;
+}
+.yellowFlagAlert {
+  margin-top: 8px;
+  height: 45px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 0, 0.708);
+  border-radius: 4px;
+}
+.yellowFlagAlert p {
+  color: black;
+}
+.greenFlagAlert {
+  margin-top: 8px;
+  height: 45px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 128, 0, 0.758);
+  border-radius: 4px;
+}
+.greenFlagAlert p {
+  color: black;
+}
+/* Disabled button*/
+.disabledBtn {
+  background-color: gray !important;
+  color: whitesmoke;
+}
+.health-odds-calculator button {
+  box-shadow: 1px 0px 6px -1px rgba(0, 0, 0, 0.77);
+  text-transform: uppercase;
+}
+.health-odds-calculator button:active {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.87);
+}
+.disabledBtn:hover {
+  cursor: not-allowed;
+}
+
+.buttonInfoContainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* calculate Btn */
+.calculateBtn{
+background-color: #339e33 !important;
+}
+

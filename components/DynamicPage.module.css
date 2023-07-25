@@ -1,0 +1,119 @@
+.mainContainer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.innerContainer {
+  background-color: white;
+  border-radius: 8px;
+  width: 1200px;
+  height: 700px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  -webkit-box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin: 15px;
+}
+.backBtnContainer {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+.backBtnContainer a {
+  color: var(--secondary-text-color);
+  margin-left: 2rem;
+  border-radius: 16px;
+  padding: 5px;
+}
+.backBtnContainer a span{
+ position: absolute;
+ left: 25px;
+ top: 14px;
+ transform: translateX(-50%);
+ transition: transform 0.3s ease;
+}
+
+.backBtnContainer a:hover {
+      text-decoration: underline;
+      color: black;
+   
+  
+
+}
+
+.backBtnContainer a:hover span{
+      color: black;
+      animation: moveArrow 1.8s linear;
+  
+
+}
+.headerContainer{
+    width: 100%;
+    text-align: center;
+}
+.mainGridContainer{
+  display: grid;
+  height: 300px;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 1rem;
+}
+.mainGridContainer > div:first-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mainGridContainer > div:nth-child(2) h2{
+   margin: 0;
+}
+.mainGridContainer > div:nth-child(2) P{
+   margin: 0;
+}
+.rehabDetailContainer{
+   padding: 1rem;
+}
+
+@keyframes moveArrow {
+  0% {
+    transform: translateX(-100%) ;
+  }
+  50% {
+    transform: translateX(-0%) ;
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media screen and (max-width: 742px) {
+  .mainContainer{
+    padding-top: 3rem;
+    font-size: 19px;
+   
+  }
+  .mainGridContainer{
+  grid-template-columns: 1fr;
+  height: fit-content;
+  gap: 50px;
+  
+
+}
+.innerContainer {
+  height: fit-content;
+  min-width: 500px;
+ 
+}
+.backBtnContainer {
+  display: flex;
+  align-items: center;
+}
+}
+

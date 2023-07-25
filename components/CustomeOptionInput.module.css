@@ -1,0 +1,20 @@
+.selectStyles {
+  background-color: rgba(128, 128, 128, 0.046);
+  outline: none;
+}
+.selectStyles option {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  padding: 100px;
+}
+.selectStyles:focus {
+  border: none;
+  border: 2px solid rgba(255, 0, 0, 0.343);
+}
+.selectStyles option:checked {
+  border: none;
+}
+.selectStyles option:active {
+  border: none;
+}

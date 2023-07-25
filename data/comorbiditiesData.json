@@ -1,0 +1,429 @@
+  [{
+          "id": 0,
+          "value": 0,
+          "name": "No Comorbidities",
+          "age": {
+            "group1": 0
+          },
+          "gender": {
+              "male": 0,
+              "female": 0
+          }
+      },
+      {
+          "id": 1,
+          "value": 5,
+          "name": "GERD",
+          "age":{
+            "group1": 1
+          },
+          "gender": {
+              "male": 3,
+              "female": 0
+          }
+      },
+      {
+          "id": 2,
+          "value": 20,
+          "name": "Chronic Kidney disease",
+          "age": 2,
+          "gender": {
+              "male": 3,
+              "female": 0
+          }
+      },
+      {
+          "id": 3,
+          "value": 50,
+         "name": "AIDS",
+          "age": {
+            "group1": 1
+          },
+          "gender": {
+              "male": 3,
+              "female": 0
+          }
+      },
+      {
+          "id": 4,
+          "value": 15,
+          "name": "Atrial fibrillation",
+          "age": {
+            "group1": 2
+          },
+          "gender": {
+              "male": 5,
+              "female": 5
+          }
+      },
+      {
+          "id": 5,
+          "value": 40,
+          "name": "Covid-19",
+          "age": {
+              "group1": 30,
+              "group2": 40,
+              "group3": 50
+          },
+          "gender": {
+              "male": 5,
+              "female": 5
+          }
+      },
+      {
+          "id": 6,
+          "value": 10,
+          "name": "Hypertension",
+          "age": {
+            "group1": 2
+          },
+          "gender": {
+              "male": 2,
+              "female": 2
+          }
+      },
+      {
+          "id": 7,
+          "value": 5,
+         "name": "Smoking, current or former",
+          "age": {
+            "group1": 3
+          },
+          "gender": {
+              "male": 2,
+              "female": 2
+          }
+      },
+      {
+          "id": 8,
+          "value": 60,
+          "name": "Stroke or cerebrovascular disease",
+          "age": {
+              "group1": 30,
+              "group2": 60,
+              "group3": 80
+          },
+          "gender": {
+              "male": 3,
+              "female": 3
+          }
+      },
+      {
+          "id": 9,
+          "value": 25,
+          "name": "Substance Abuse",
+          "age": 2,
+          "gender": {
+              "male": 2,
+              "female": 2
+          }
+      },
+      {
+          "id": 10,
+          "value": 30,
+         "name": "Coronary heart disease",
+          "age": {
+              "group1": 14,
+              "group2": 30,
+              "group3": 45
+          },
+          "gender": {
+              "male": 3,
+              "female": 3
+          }
+      },
+      {
+          "id": 11,
+          "value": 45,
+         "name": "Heart Failure (Ejection Fraction >= 45%)",
+          "age": {
+            "group1": 2
+          },
+          "gender": {
+              "male": 3,
+              "female": 3
+          }
+      },
+      {
+          "id": 12,
+          "value": 40,
+         "name": "Pulmonary Hypertension",
+          "age": {
+            "group1": 2
+          },
+          "gender": {
+              "male": 3,
+              "female": 3
+          }
+      },
+      {
+          "id": 13,
+          "value": 10,
+         "name": "Diabetes (type 1 or type 2) Uncomplicated",
+          "age": {
+              "group1": 5,
+              "group2": 10,
+              "group3": 15
+          },
+          "gender": {
+              "male": 3,
+              "female": 3
+          }
+      },
+      {
+          "id": 14,
+          "value": 35,
+          "name": "COPD",
+          "age": {
+            "group1": 3
+          },
+          "gender": {
+              "male": 3,
+              "female": 3
+          }
+      },
+      {
+          "id": 15,
+          "value": 65,
+          "name": "End-Stage COPD",
+          "age": {
+              "group1": 5,
+              "group2": 10,
+              "group3": 15
+          },
+          "gender": {
+              "male": 5,
+              "female": 5
+          }
+      },
+      {
+          "id": 16,
+          "value": 50,
+         "name": "Pulmonary embolism",
+          "age":{
+            "group1": 5
+          },
+          "gender": {
+              "male": 5,
+              "female": 5
+          }
+      },
+      {
+          "id": 17,
+          "value": 15,
+          "name": "Depression",
+          "age": {
+            "group1": 4
+          },
+          "gender": {
+              "male": 3,
+              "female": 3
+          }
+      },
+      {
+          "id": 18,
+          "value": 10,
+          "name": "Anxiety",
+          "age": {
+            "group1": 3
+          },
+          "gender": {
+              "male": 2,
+              "female": 2
+          }
+      },
+      {
+          "id": 19,
+          "value": 20,
+         "name": "Overweight and obesity",
+          "age": {
+            "group1": 3
+          },
+          "gender": {
+              "male": 3,
+              "female": 3
+          }
+      },
+      {
+          "id": 20,
+          "value": 60,
+          "name": "immunocompromised",
+          "age": {
+              "group1": 40,
+              "group2": 60,
+              "group3": 80
+          }
+      },
+      {
+          "id": 21,
+          "value": 75,
+          "name": "Cancer",
+          "age": {
+            "group1": 3
+          },
+          "gender": {
+              "male": 3,
+              "female": 3
+          }
+      },
+      {
+          "id": 22,
+          "value": 50,
+          "name": "Dementia",
+          "age": {
+              "group1": 30,
+              "group2": 50
+          },
+          "gender": {
+              "male": 5,
+              "female": 5
+          }
+      },
+      {
+          "id": 23,
+          "value": 30,
+          "name": "Heart conditions",
+          "age": {
+              "group1": 15,
+              "group2": 30,
+              "group3": 45
+          },
+          "gender": {
+              "male": 5,
+              "female": 5
+          }
+      },
+      {
+          "id": 24,
+          "value": 65,
+          "name": "Heart Failure (Ejection Fraction <= 40%)",
+          "age": {
+            "group1": 15
+          },
+          "gender": {
+              "male": 5,
+              "female": 5
+          }
+      },
+      {
+          "id": 25,
+          "value": 10,
+          "name": "Liver disease Mild",
+          "age": {
+            "group1":2
+          },
+          "gender": {
+              "male": 3,
+              "female": 3
+          }
+      },
+      {
+          "id": 26,
+          "value": 30,
+          "name": "HIV Infection",
+          "age": {
+            "group1": 3
+          },
+          "gender": {
+              "male": 3,
+              "female": 3
+          }
+      },
+      {
+          "id": 27,
+          "value": 40,
+         "name": "Liver disease Moderate to Severe",
+          "age": {
+              "group1": 5,
+              "group2": 10
+          },
+          "gender": {
+              "male": 3,
+              "female": 3
+          }
+      },
+      {
+          "id": 28,
+          "value": 70,
+         "name": "Lung Cancer",
+          "age": {
+              "group1": 15,
+              "group2": 30,
+              "group3": 50
+          },
+          "gender": {
+              "male": 3,
+              "female": 3
+          }
+      },
+      {
+          "id": 29,
+          "value": 30,
+          "name": "Moderate to Severe CKD",
+          "age": {
+            "group1": 3
+          },
+          "gender": {
+              "male": 3,
+              "female": 3
+          }
+      },
+      {
+          "id": 30,
+          "value": 40,
+         "name": "Diabetes (type 1 or type 2) End-organ damage",
+          "age": {
+              "group1": 20,
+              "group2": 40,
+              "group3": 60
+          },
+          "gender": {
+              "male": 5,
+              "female": 5
+          }
+      },
+      {
+          "id": 31,
+          "value": 35,
+         "name": "Ortho (fractures)",
+          "age": {
+              "group1": 20,
+              "group2": 40,
+              "group3": 60
+          },
+          "gender": {
+              "male": 5,
+              "female": 5
+          }
+      },
+      {
+          "id": 30,
+          "value": 60,
+         "name": "Traumatic Brain Injury (TBI)",
+          "age": {
+              "group1": 20,
+              "group2": 40,
+              "group3": 60
+          },
+          "gender": {
+              "male": 5,
+              "female": 5
+          }
+      },
+      {
+          "id": 30,
+          "value": 40,
+         "name": "Neurological Conditions (Cerebral Palsy)",
+          "age": {
+              "group1": 20,
+              "group2": 40,
+              "group3": 60
+          },
+          "gender": {
+              "male": 5,
+              "female": 5
+          }
+      }
+
+
+  ]

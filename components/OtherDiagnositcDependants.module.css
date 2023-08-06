@@ -2,11 +2,25 @@
   padding-bottom: 20px;
   display: grid;
   grid-template-columns: repeat(2, auto);
-  text-align: center;
+  
 }
 .symptomList div {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 1px;
+  margin: 5px;
+  padding: 8px;
+}
+.innerSymptomList:hover {
+  background-color: rgba(0, 0, 0, 0.233);
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+}
+.innerSymptomList:hover label {
+  color: rgb(212, 210, 210);
 }
 .symptomList div label {
   text-align: center;

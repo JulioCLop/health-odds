@@ -7,6 +7,8 @@
   gap: 7px;
   margin-bottom: 1rem;
 }
+
+
 .textGuide{
   color: rgba(0, 0, 0, 0.78);
 }
@@ -83,6 +85,7 @@
   font-weight: bold;
   color: #555;
 }
+
 .selectStyles {
   background-color: rgba(128, 128, 128, 0.046);
   outline: none;
@@ -103,8 +106,6 @@
 .selectStyles option:active {
   border: none;
 }
-
-
 .health-odds-calculator input,
 .health-odds-calculator select {
   width: 100%;
@@ -137,7 +138,7 @@
 }
 
 .health-odds-calculator button:hover {
-  background-color: #0056b3;
+  background-color: rgb(0, 86, 179);
 }
 
 .health-odds-calculator .odds-result {
@@ -233,3 +234,28 @@
 background-color: #339e33 !important;
 }
 
+/* input styles for symptoms */
+.innerSymptomList{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.innerSymptomList div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.innerSymptomList:hover {
+  background-color: rgba(0, 0, 0, 0.233);
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+}
+.innerSymptomList:hover label {
+  color: rgb(212, 210, 210);
+}
+.symptomList div label {
+  text-align: center;
+  padding: 1px;
+}

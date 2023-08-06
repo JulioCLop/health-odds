@@ -7,8 +7,6 @@
 .symptomList div {
   text-align: center;
   padding: 1px;
-}
-.symptomList div label {
-  text-align: center;
-  padding: 1px;
+  margin: 5px;
+  padding: 8px;
 }

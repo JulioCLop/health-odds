@@ -49,6 +49,10 @@
           "value": 20,
           "name": "Chronic Kidney disease"
 
+      }, {
+          "id": 2,
+          "value": 20.02,
+          "name": "Severe Malnutrition"
       },
       {
           "id": 19,
@@ -189,9 +193,23 @@
       {
           "id": 21,
           "value": 75,
-          "name": "Cancer"
+          "name": "Cancer (mid to end-stage)"
 
+      },
+      {
+          "id": 40,
+          "value": 76,
+          "name": "Severe Alzheimer's Disease"
+
+      },
+      {
+          "id": 41,
+          "value": 76.03,
+          "name": "Parkinson's Disease"
+      },
+      {
+          "id": 42,
+          "value": 76.05,
+          "name": "Severe Mental Illness"
       }
-
-
   ]

@@ -1,0 +1,570 @@
+[{
+        "pulmonary": {
+            "symptoms": [{
+                "name": "Dyspnea",
+                "inputValue": "pulmonarySymptomDyspnea",
+                "value": "10.01"
+            }, {
+                "name": "Exercise intolerance",
+                "inputValue": "pulmonarySymptomExerciseIntolerance",
+                "value": "10.03"
+            }, {
+                "name": "Increase SOB with Ambulation",
+                "inputValue": "pulmonarySymptomExerciseIntoleranceWithAmbulation",
+                "value": "10.06"
+            }, {
+                "name": "Fluid retention",
+                "inputValue": "pulmonarySymptomFluidRetention",
+                "value": "25.2"
+            }, {
+                "name": "Frequent exacerbations",
+                "inputValue": "pulmonarySymptomFrequentExacerbations",
+                "value": "15.2"
+            }, {
+                "name": "Increased hospitalizations",
+                "inputValue": "pulmonarySymptomIncreasedHospitalizations",
+                "value": "10.09"
+            }, {
+                "name": "Cognitive changes",
+                "inputValue": "pulmonarySymptomIncreasedHospitalizations",
+                "value": "10.091"
+            }, {
+                "name": " Poor prognosis",
+                "inputValue": "pulmonarySymptomPoorPrognosis",
+                "value": "10.093"
+            }, {
+                "name": "Oxygen Use(< 4L)",
+                "inputValue": "pulmonarySymptomOxygenUseLess",
+                "value": "10.096"
+            }, {
+                "name": "Oxygen Use(< 8L)",
+                "inputValue": "pulmonarySymptomOxygenUseHigh",
+                "value": "20"
+            }, {
+                "name": "Oxygen Use(< 10L)",
+                "inputValue": "pulmonarySymptomOxygenUseHigh",
+                "value": "20"
+            }, {
+                "name": "Trach > 72hrs",
+                "inputValue": "pulmonaRiskHyperTrachValue",
+                "value": "25.6421"
+            }, {
+                "name": "BIPAP (daily use)",
+                "inputValue": "pulmonarySymptomDailyBipapUse",
+                "value": "40.231"
+            }, {
+                "name": "Home CPAP",
+                "inputValue": "pulmonarySymptomDailyBipapUse",
+                "value": "12.321"
+            }],
+            "risk": [{
+                    "name": "Reduced Lung Function",
+                    "inputValue": "pulmonaryRiskLungFunction",
+                    "value": "15.55"
+                },
+                {
+                    "name": "Cardiac arrest history",
+                    "inputValue": "pulmonaryRiskCardiacArrest",
+                    "value": "13.553"
+                },
+                {
+                    "name": "Medication interactions",
+                    "inputValue": "pulmonaryRiskMedicationInteraction",
+                    "value": "9.352"
+                },
+                {
+                    "name": "Psychological challenges",
+                    "inputValue": "pulmonaryRiskPyscChallenges",
+                    "value": "12.587"
+                }
+            ]
+        }
+    }, {
+        "stroke": {
+            "symptoms": [{
+                "name": "Numbness or weakness",
+                "inputValue": "strokeNumbnessOrLossOfSensationValue",
+                "value": "8.121"
+            }, {
+                "name": "Paralysis",
+                "inputValue": "strokeParalysisValue",
+                "value": "10.122"
+            }, {
+                "name": "Speech difficulties",
+                "inputValue": "strokeSpeechDifficultiesValue",
+                "value": "10.123"
+            }, {
+                "name": "Vision problems",
+                "inputValue": "strokeVisionProblemsValue",
+                "value": "25.212"
+            }, {
+                "name": "Cordination issue",
+                "inputValue": "strokeVisionProblemsValue",
+                "value": "15.235"
+            }, {
+                "name": "Cognitive changes",
+                "inputValue": "strokeCognitiveChangesValue",
+                "value": "10.09133"
+            }, {
+                "name": "Poor prognosis",
+                "inputValue": "pulmonarySymptomPoorPrognosis",
+                "value": "10.093"
+            }, {
+                "name": "Poor Mental Status",
+                "inputValue": "pulmonarySymptomPoorPrognosis",
+                "value": "25.2463"
+            }],
+            "risk": [{
+                    "name": "High Blood Pressure",
+                    "inputValue": "pulmonaryRiskLungFunction",
+                    "value": "15.55"
+                },
+                {
+                    "name": "Atrial Fibrillation",
+                    "inputValue": "pulmonaryRiskCardiacArrest",
+                    "value": "13.553"
+                },
+                {
+                    "name": "Diabetes",
+                    "inputValue": "pulmonaryRiskMedicationInteraction",
+                    "value": "9.352"
+                },
+                {
+                    "name": "Smoking",
+                    "inputValue": "strokeRiskSmokingValue",
+                    "value": "12.587"
+                },
+                {
+                    "name": "High Cholesterol",
+                    "inputValue": "strokeRiskHighCholesterolValue",
+                    "value": "12.587"
+                },
+                {
+                    "name": "Family History",
+                    "inputValue": "pulmonaryRiskPyscChallenges",
+                    "value": "12.587"
+                },
+                {
+                    "name": "Excessive Alcohol Consumption",
+                    "inputValue": "strokeRiskExcessiveAlcoholValue",
+                    "value": "12.587"
+                },
+                {
+                    "name": "Obesity",
+                    "inputValue": "strokeRiskObesityValue",
+                    "value": "12.587"
+                },
+                {
+                    "name": "Previous Stroke",
+                    "inputValue": "strokeRiskPreviousStrokeValue",
+                    "value": "12.587"
+                }, {
+                    "name": "Previous Admission",
+                    "inputValue": "strokeRiskPreviousAdmissionValue",
+                    "value": "12.587"
+                }, {
+                    "name": "Use of Drugs",
+                    "inputValue": "strokeRiskUseOfDrugsValue",
+                    "value": "12.587"
+                }
+            ]
+        }
+    },
+    {
+        "tbi": {
+            "symptoms": [{
+                "name": "Loss of consciousness",
+                "inputValue": "tbiSymptomLossOfConsciousness",
+                "value": "10.01"
+            }, {
+                "name": "Severe headaches",
+                "inputValue": "tbiSymptomSevereHeadaches",
+                "value": "10.03"
+            }, {
+                "name": "Nausea and vomiting",
+                "inputValue": "tbiSymptomNauseaVomiting",
+                "value": "10.06"
+            }, {
+                "name": "Confusion",
+                "inputValue": "tbiSymptomConfusion",
+                "value": "25.2"
+            }, {
+                "name": "Dizziness or balance problems",
+                "inputValue": "tbiSymptomDizzinessBalance",
+                "value": "15.2"
+            }, {
+                "name": "Fatigue or drowsiness",
+                "inputValue": "tbiSymptomFatigueDrowsiness",
+                "value": "10.09"
+            }, {
+                "name": "Sensory changes",
+                "inputValue": "tbiSymptomSensory",
+                "value": "10.091"
+            }, {
+                "name": "Mood changes",
+                "inputValue": "tbiSymptomMoodChanges",
+                "value": "10.093"
+            }, {
+                "name": "Seizures",
+                "inputValue": "tbiSymptomSeizures",
+                "value": "10.096"
+            }, {
+                "name": "Slurred speech",
+                "inputValue": "tbiSymptomSlurredSpeech",
+                "value": "20"
+            }, {
+                "name": "Weakness of extremities",
+                "inputValue": "tbiSymptomWeaknessExtremities",
+                "value": "20"
+            }, {
+                "name": "Coordination problems",
+                "inputValue": "tbiSymptomCoordinationProblems",
+                "value": "25.6421"
+            }, {
+                "name": "Poor Mental Status",
+                "inputValue": "tbiSymptomPoorMentalStatus",
+                "value": "40.231"
+            }],
+            "risk": [{
+                    "name": "Hight fall risk",
+                    "inputValue": "tbiRiskHighRiskFall",
+                    "value": "15.55"
+                },
+                {
+                    "name": "Sleep Disturbances",
+                    "inputValue": "tbiRiskSleepDistubances",
+                    "value": "13.553"
+                },
+                {
+                    "name": "Memory Problems",
+                    "inputValue": "tbiRiskMemoryProblems",
+                    "value": "9.352"
+                },
+                {
+                    "name": "Processing Speed Reduction",
+                    "inputValue": "tbiRiskProcessingSpeed",
+                    "value": "12.587"
+                },
+                {
+                    "name": "Impulsivity",
+                    "inputValue": "tbiRiskImpulsivity",
+                    "value": "12.587"
+                },
+                {
+                    "name": "Agitation and Restlessness",
+                    "inputValue": "tbiRiskAgitationRestless",
+                    "value": "12.587"
+                }
+            ]
+        }
+    },
+    {
+        "neuro": {
+            "symptoms": [{
+                "name": "Headache",
+                "inputValue": "nueroSymptomHeadache",
+                "value": "10.01"
+            }, {
+                "name": "Seizures",
+                "inputValue": "nueroSymptomSeizures",
+                "value": "10.03"
+            }, {
+                "name": "Weakness or Paralysis",
+                "inputValue": "nueroSymptomWeaknessOrParalysis",
+                "value": "10.06"
+            }, {
+                "name": "Sensory Changes",
+                "inputValue": "tnueroSymptomSensoryChanges",
+                "value": "25.2"
+            }, {
+                "name": "Balance and Coordination Problems",
+                "inputValue": "nueroSymptomBalanceCoordination",
+                "value": "15.2"
+            }, {
+                "name": "Cognitive Impairment",
+                "inputValue": "nueroSymptomCognitiveImpairment",
+                "value": "10.09"
+            }, {
+                "name": "Changes in Vision",
+                "inputValue": "nueroSymptomChangesInVision",
+                "value": "10.091"
+            }, {
+                "name": "Speech and Language Difficulties",
+                "inputValue": "nueroSymptomSpeechLanguageDifficulties",
+                "value": "10.093"
+            }, {
+                "name": "Tremors and Movement Disorders",
+                "inputValue": "neuroSymptomTremorsMovementDisorder",
+                "value": "10.096"
+            }, {
+                "name": "Memory Loss",
+                "inputValue": "neuroSymptomMemoryLoss",
+                "value": "20"
+            }, {
+                "name": "Difficulty Swallowing (Dysphagia)",
+                "inputValue": "neuroSymptomDysphagia",
+                "value": "20"
+            }, {
+                "name": "Urinary and Bowel Dysfunction",
+                "inputValue": "neuroSymptomUrinaryBowlDysfunction",
+                "value": "25.6421"
+            }, {
+                "name": "Sleep Disturbances",
+                "inputValue": "neuroSymptomSleepDisturbances",
+                "value": "40.231"
+            }, {
+                "name": "Autonomic Dysfunction",
+                "inputValue": "neuroSymptomAutonomicDysfunction",
+                "value": "40.231"
+            }],
+            "risk": [{
+                    "name": "Hight fall risk",
+                    "inputValue": "neuroRiskHighFallRisk",
+                    "value": "15.55"
+                },
+                {
+                    "name": "Sleep Disturbances",
+                    "inputValue": "neuroRiskSleepDistubances",
+                    "value": "13.553"
+                },
+                {
+                    "name": "Memory Problems",
+                    "inputValue": "neuroRiskMemoryProblems",
+                    "value": "9.352"
+                },
+                {
+                    "name": "Processing Speed Reduction",
+                    "inputValue": "neuroRiskProcessingSpeed",
+                    "value": "12.587"
+                },
+                {
+                    "name": "Impulsivity",
+                    "inputValue": "neuroRiskImpulsivity",
+                    "value": "12.587"
+                },
+                {
+                    "name": "Agitation and Restlessness",
+                    "inputValue": "neuroRiskAgitationRestless",
+                    "value": "12.587"
+                }
+            ]
+        }
+    },
+     {
+         "ortho": {
+             "symptoms": [{
+                 "name": "Pain",
+                 "inputValue": "orthoSymptomPain",
+                 "value": "10.01"
+             }, {
+                 "name": "Swelling",
+                 "inputValue": "orthoSymptomSwelling",
+                 "value": "10.03"
+             }, {
+                 "name": "Stiffness",
+                 "inputValue": "orthoSymptomStiffness",
+                 "value": "10.06"
+             }, {
+                 "name": "Instability",
+                 "inputValue": "orthoSymptomInstability",
+                 "value": "25.2"
+             }, {
+                 "name": "Weakness",
+                 "inputValue": "orthoSymptomWeakness",
+                 "value": "15.2"
+             }, {
+                 "name": "Limited Mobility",
+                 "inputValue": "orthoSymptomLimitedMobility",
+                 "value": "10.09"
+             }, {
+                 "name": "Clicking or Popping Sensations",
+                 "inputValue": "orthoSymptomClickingPopping",
+                 "value": "10.091"
+             }, {
+                 "name": "Numbness or Tingling",
+                 "inputValue": "orthoSymptomNumbnessTingling",
+                 "value": "10.093"
+             }, {
+                 "name": "Reduced Function",
+                 "inputValue": "orthoSymptomReducedFunction",
+                 "value": "10.096"
+             }],
+             "risk": [{
+                     "name": "High fall risk",
+                     "inputValue": "orthoRiskHighFallRisk",
+                     "value": "15.55"
+                 },
+                 {
+                     "name": "Obesity",
+                     "inputValue": "orthoRiskObesity",
+                     "value": "13.553"
+                 },
+                 {
+                     "name": "Previous Injuries",
+                     "inputValue": "orthoRiskPreviousInjury",
+                     "value": "9.352"
+                 },
+                 {
+                     "name": "Bone Density",
+                     "inputValue": "orthoRiskBonesDensity",
+                     "value": "12.587"
+                 },
+                 {
+                     "name": "Autoimmune Conditions",
+                     "inputValue": "orthoRiskAutoimmune",
+                     "value": "12.587"
+                 },
+                 {
+                     "name": "Poor Posture",
+                     "inputValue": "orthoRiskAutoimmune",
+                     "value": "12.587"
+                 }
+             ]
+         }
+     },
+       {
+           "cardiac": {
+               "symptoms": [{
+                   "name": "Chest Pain or Discomfort",
+                   "inputValue": "cardiacSymptomChestPain",
+                   "value": "10.01"
+               }, {
+                   "name": "Shortness of Breath",
+                   "inputValue": "cardiacSymptomSOB",
+                   "value": "10.03"
+               }, {
+                   "name": "Palpitations",
+                   "inputValue": "cardiacSymptomPalpitations",
+                   "value": "10.06"
+               }, {
+                   "name": "Fatigue",
+                   "inputValue": "cardiacSymptomFatigue",
+                   "value": "25.2"
+               }, {
+                   "name": "Dizziness or Fainting",
+                   "inputValue": "cardiacSymptomDizziness",
+                   "value": "15.2"
+               }, {
+                   "name": "Peripheral edema",
+                   "inputValue": "cardiacSymptomPeripheralEdema",
+                   "value": "10.09"
+               }, {
+                   "name": "Cold Sweats",
+                   "inputValue": "cardiacSymptomColdSweat",
+                   "value": "10.091"
+               }, {
+                   "name": "Nausea and Indigestion",
+                   "inputValue": "cardiacSypmtomNauseaIndigestion",
+                   "value": "10.093"
+               }, {
+                   "name": "Jaw, Neck, or Arm Pain",
+                   "inputValue": "cardiacSymptomJawNeckArmPain",
+                   "value": "10.096"
+               }, {
+                   "name": "Unexplained Weakness",
+                   "inputValue": "cardiacSymptomUnexplainedWeakness",
+                   "value": "20"
+               }],
+               "risk": [{
+                       "name": "Age > 65yrs",
+                       "inputValue": "cardiacRiskAgeRisk",
+                       "value": "15.55"
+                   },
+                   {
+                       "name": "High Blood Pressure",
+                       "inputValue": "cardiacRiskHighBloodPressure",
+                       "value": "13.553"
+                   },
+                   {
+                       "name": "High Cholesterol",
+                       "inputValue": "cardiacRiskHighCholesterol",
+                       "value": "9.352"
+                   },
+                   {
+                       "name": "Smoking",
+                       "inputValue": "cardiacRiskSmoking",
+                       "value": "12.587"
+                   },
+                   {
+                       "name": "Diabetes",
+                       "inputValue": "cardiacRiskDiabetes",
+                       "value": "12.587"
+                   },
+                   {
+                       "name": "Obesity",
+                       "inputValue": "cardiacRiskObesity",
+                       "value": "12.587"
+                   }, {
+                       "name": "Unhealthy Diet",
+                       "inputValue": "cardiacRiskUnhealthyDiet",
+                       "value": "12.587"
+                   }, {
+                       "name": "Alcohol and Drug Abuse",
+                       "inputValue": "cardiacRiskAlcoholDrugAbuse",
+                       "value": "12.587"
+                   }, {
+                       "name": "Sleep Disorders",
+                       "inputValue": "cardiacRiskSleepDisorder",
+                       "value": "12.587"
+                   }
+
+               ]
+           }
+       },
+        {
+            "burns": {
+                "symptoms": [{
+                    "name": "Redness and Pain",
+                    "inputValue": "burnsSymptomRednessPain",
+                    "value": "10.01"
+                }, {
+                    "name": "Blisters",
+                    "inputValue": "burnsSymptomBlisters",
+                    "value": "10.03"
+                }, {
+                    "name": "White or Charred Skin",
+                    "inputValue": "burnsSymptomWhiteCharred",
+                    "value": "10.06"
+                }, {
+                    "name": "Difficulty Breathing",
+                    "inputValue": "burnsSymptomDifficultyBreathing",
+                    "value": "25.2"
+                }, {
+                    "name": "Swelling",
+                    "inputValue": "burnsSymptomSwelling",
+                    "value": "15.2"
+                }, {
+                    "name": "Peeling Skin",
+                    "inputValue": "burnsSymptomPeelingSkin",
+                    "value": "10.09"
+                }, {
+                    "name": "Shock",
+                    "inputValue": "burnsSymptomShock",
+                    "value": "10.091"
+                }],
+                "risk": [{
+                        "name": "Infection",
+                        "inputValue": "burnsRiskInfection",
+                        "value": "15.55"
+                    },
+                    {
+                        "name": "Hypovolemia",
+                        "inputValue": "burnsRiskHypovolemia",
+                        "value": "13.553"
+                    },
+                    {
+                        "name": "Inhalation Injury",
+                        "inputValue": "burnsRiskInhalationInjury",
+                        "value": "9.352"
+                    },
+                    {
+                        "name": "Emotional and Psychological Impact",
+                        "inputValue": "burnsRiskEmotional",
+                        "value": "12.587"
+                    }
+                ]
+            }
+        }
+    
+
+]

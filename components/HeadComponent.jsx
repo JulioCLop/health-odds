@@ -4,14 +4,14 @@ import MedicalCondition from "./MedicalConditions";
 import OtherDiagnositicDependant from "./OtherDiagnositcDependants";
 import MedicalInfo from "../data/medicalInformation.json";
 import CustomOptionInput from "./CustomOptionInput";
+import symptomData from "../data/DiagnosisData.json";
 import { SymptonSection } from "./SymptonSection";
-import cls from 'classnames';
+import cls from "classnames";
 import Link from "next/link";
 
-
-
-
 function HealthOddsCalculator(props) {
+
+  const originalList = [];
   const initialState = {
     stroke: false,
     strokeValue: 0,
@@ -47,7 +47,7 @@ function HealthOddsCalculator(props) {
     comorbiditiesBurns3: 0,
     secondaryDiagnosisStroke: 0,
     strokeNumbnessOrLossOfSensationValue: 0,
-    strokeParalysisOrWeaknessValue: 0,
+    strokeParalysisValue: 0,
     strokeSpeechDifficultiesValue: 0,
     strokeVisionProblemsValue: 0,
     strokeCoordinationValue: 0,
@@ -61,16 +61,119 @@ function HealthOddsCalculator(props) {
     strokeRiskPreviousStrokeValue: 0,
     strokeRiskPreviousAdmissionValue: 0,
     strokeRiskHyperTensionValue: 0,
-    strokeRiskHyperTrachValue: 0,
+    pulmonaRiskHyperTrachValue: 0,
+    pulmonarySymptomDailyBipapUse: 0,
+    pulmonarySymptomDyspnea: 0,
+    pulmonarySymptomHomecpap: 0,
+    pulmonarySymptomExerciseIntolerance: 0,
+    pulmonarySymptomFluidRetention: 0,
+    pulmonarySymptomFrequentExacerbations: 0,
+    pulmonarySymptomIncreasedHospitalizations: 0,
+    pulmonarySymptomCognitiveChanges: 0,
+    pulmonarySymptomPoorPrognosis: 0,
+    pulmonarySymptomOxygenUseLess: 0,
+    pulmonarySymptomOxygenUseHigh: 0,
+    pulmonarySymptomOxygenUseMax: 0,
+    pulmonarySymptomExerciseIntoleranceWithAmbulation: 0,
+    pulmonaryRiskLungFunction: 0,
+    pulmonaryRiskCardiacArrest: 0,
+    pulmonaryRiskMedicationInteraction: 0,
+    pulmonaryRiskPyscChallenges: 0,
+    tbiSymptomLossOfConsciousness: 0,
+    tbiSymptomSevereHeadaches: 0,
+    tbiSymptomNauseaVomiting: 0,
+    tbiSymptomConfusion: 0,
+    tbiSymptomDizzinessBalance: 0,
+    tbiSymptomFatigueDrowsiness: 0,
+    tbiSymptomSensory: 0,
+    tbiSymptomMoodChanges: 0,
+    tbiSymptomSeizures: 0,
+    tbiSymptomSlurredSpeech: 0,
+    tbiSymptomWeaknessExtremities: 0,
+    tbiSymptomCoordinationProblems: 0,
+    tbiSymptomPoorMentalStatus: 0,
+    tbiRiskHighRiskFall: 0,
+    tbiRiskSleepDistubances: 0,
+    tbiRiskMemoryProblems: 0,
+    tbiRiskProcessingSpeed: 0,
+    tbiRiskImpulsivity: 0,
+    tbiRiskAgitationRestless: 0,
+    nueroSymptomHeadache: 0,
+    nueroSymptomSeizures: 0,
+    nueroSymptomWeaknessOrParalysis: 0,
+    nueroSymptomSensoryChanges: 0,
+    nueroSymptomBalanceCoordination: 0,
+    nueroSymptomCognitiveImpairment: 0,
+    nueroSymptomChangesInVision: 0,
+    nueroSymptomSpeechLanguageDifficulties: 0,
+    neuroSymptomTremorsMovementDisorder: 0,
+    neuroSymptomMemoryLoss: 0,
+    neuroSymptomDysphagia: 0,
+    neuroSymptomUrinaryBowlDysfunction: 0,
+    neuroSymptomSleepDisturbances: 0,
+    neuroSymptomAutonomicDysfunction: 0,
+    neuroRiskHighFallRisk: 0,
+    neuroRiskSleepDistubances: 0,
+    neuroRiskMemoryProblems: 0,
+    neuroRiskProcessingSpeed: 0,
+    neuroRiskImpulsivity: 0,
+    neuroRiskAgitationRestless: 0,
+    orthoSymptomPain: 0,
+    orthoSymptomSwelling: 0,
+    orthoSymptomStiffness: 0,
+    orthoSymptomInstability: 0,
+    orthoSymptomWeakness: 0,
+    orthoSymptomLimitedMobility: 0,
+    orthoSymptomClickingPopping: 0,
+    orthoSymptomNumbnessTingling: 0,
+    orthoSymptomReducedFunction: 0,
+    orthoRiskHighFallRisk: 0,
+    orthoRiskObesity: 0,
+    orthoRiskPreviousInjury: 0,
+    orthoRiskBonesDensity: 0,
+    orthoRiskAutoimmune: 0,
+    orthoRiskAutoimmune: 0,
+    cardiacSymptomChestPain: 0,
+    cardiacSymptomSOB: 0,
+    cardiacSymptomPalpitations: 0,
+    cardiacSymptomFatigue: 0,
+    cardiacSymptomDizziness: 0,
+    cardiacSymptomPeripheralEdema: 0,
+    cardiacSymptomColdSweat: 0,
+    cardiacSypmtomNauseaIndigestion: 0,
+    cardiacSymptomJawNeckArmPain: 0,
+    cardiacSymptomUnexplainedWeakness: 0,
+    cardiacRiskAgeRisk: 0,
+    cardiacRiskHighBloodPressure: 0,
+    cardiacRiskHighCholesterol: 0,
+    cardiacRiskSmoking: 0,
+    cardiacRiskDiabetes: 0,
+    cardiacRiskObesity: 0,
+    cardiacRiskUnhealthyDiet: 0,
+    cardiacRiskAlcoholDrugAbuse: 0,
+    cardiacRiskSleepDisorder: 0,
+    burnsSymptomRednessPain: 0,
+    burnsSymptomBlisters: 0,
+    burnsSymptomWhiteCharred: 0,
+    burnsSymptomDifficultyBreathing: 0,
+    burnsSymptomSwelling: 0,
+    burnsSymptomPeelingSkin: 0,
+    burnsSymptomShock: 0,
+    burnsRiskInfection: 0,
+    burnsRiskHypovolemia: 0,
+    burnsRiskInhalationInjury: 0,
+    burnsRiskEmotional: 0,
   };
+
 
   const [patientData, setPatientData] = useState(initialState);
   const [improvementOdds, setImprovementOdds] = useState(0);
   const [acuityMessage, setAcuityMessage] = useState("");
   const [alertStyles, setAlertStyles] = useState("");
   const [alertText, setAlertText] = useState("");
-  const [marginBottom, setMarginBottom] = useState("")
-  const [percentage, setPercentage] = useState(0)
+  const [marginBottom, setMarginBottom] = useState("");
+  const [percentage, setPercentage] = useState(0);
+  const [listDisease, setListDisease] = useState(originalList);
 
   let disable =
     patientData.stroke === false &&
@@ -81,14 +184,11 @@ function HealthOddsCalculator(props) {
     patientData.cardiac === false &&
     (patientData.pulmonary === false) === true;
 
-  
-  
-  const calculateHealthOdds = (props) => {
+  const calculateHealthOdds = () => {
     const numbers = Object.values(patientData)
       .filter((value) => typeof value === "string")
       .reduce((sum, value) => sum + parseInt(value), 0);
-    calculateTheProbability(numbers)
-  
+    calculateTheProbability(numbers);
 
     if (numbers > 0 && numbers <= 80) {
       setAcuityMessage("this is a great patient for rehab at pam");
@@ -104,6 +204,7 @@ function HealthOddsCalculator(props) {
       setAcuityMessage(
         "this is a red flag patient. Please procced with caution and commincate with CEO and Dr. Marrington"
       );
+
       setAlertText("Red Flag Alert");
       setAlertStyles("redFlagAlert");
     } else {
@@ -112,16 +213,143 @@ function HealthOddsCalculator(props) {
     setImprovementOdds(numbers);
   };
 
+  const highAlert = () => {
+    const updatedNumArray = listDisease.map((str) => Number(str));
+    const removeDoubles = Array.from(new Set(updatedNumArray));
+    const sum = removeDoubles.reduce((accumulator, currentValue) => {
+      return accumulator + currentValue;
+    }, 0);
+    if (sum == 130.01) {
+      props.alertDataValue((prevData) => !prevData);
+      props.alertDetail(
+        "Severe COPD Morbidities",
+        "A patient with severe COPD and heart failure with an ejection fraction of < 40% may experience severe shortness of breath, exercise intolerance, and fluid retention, leading to frequent exacerbations and increased hospitalizations. The combination of these conditions can result in a poor prognosis, with a higher mortality rate compared to having each condition separately. Management involves a comprehensive approach, including medications to optimize heart function and manage COPD symptoms, pulmonary rehabilitation, lifestyle modifications, and close monitoring by healthcare professionals."
+      );
+    } else if (sum == 60.03) {
+    
+      props.alertDataValue((prevData) => !prevData);
+      props.alertDetail(
+        "Severe Diabetes and Chronic Kidney Disease",
+        "Uncontrolled diabetes can lead to kidney damage, and when both conditions are severe, it can result in significant complications like kidney failure and cardiovascular issues."
+      );
+    } else if (sum == 95.02) {
+     
+      props.alertDataValue((prevData) => !prevData);
+      props.alertDetail(
+        "Cancer with Severe Malnutrition",
+        "Severe malnutrition can worsen the prognosis and treatment outcomes for individuals with advanced cancer, leading to further health deterioration and increased vulnerability to infections."
+      );
+    } else if (sum == 105.00999999999999) {
+   
+      props.alertDataValue((prevData) => !prevData);
+      props.alertDetail(
+        "End-Stage Heart Failure and Pulmonary Hypertension",
+        "The combination of severe heart failure and pulmonary hypertension creates a challenging situation where the heart struggles to pump blood effectively, and the blood pressure in the lungs is abnormally high, leading to severe breathing difficulties and limited physical capacity."
+      );
+    } else if (sum == 152.03) {
+ 
+   
+      props.alertDataValue((prevData) => !prevData);
+      props.alertDetail(
+        "Severe Alzheimer's Disease and Parkinson's Disease",
+        "Coexistence of severe Alzheimer's and Parkinson's can result in significant cognitive impairment, motor difficulties, and a higher risk of falls and injuries."
+      );
+    } else if (sum == 136.05) {
+    
+
+      props.alertDataValue((prevData) => !prevData);
+      props.alertDetail(
+        "Severe Mental Illness and Cardiovascular Disease",
+        "Individuals with severe mental illnesses like schizophrenia or bipolar disorder have a higher risk of cardiovascular problems due to lifestyle factors, side effects of medications, and increased stress"
+      );
+    }else if (sum == 95.01) {
+    
+      props.alertDataValue((prevData) => !prevData);
+      props.alertDetail(
+        "End-Stage Chronic Obstructive Pulmonary Disease (COPD) and Coronary Artery Disease",
+        "Severe COPD and coronary artery disease can create a detrimental cycle, where poor lung function strains the heart, and reduced blood flow to the heart further impairs lung function."
+      );
+    }else if (sum === 30.09) {
+      props.alertDataValue((prevData) => !prevData);
+      props.alertDetail(
+        "Oxygen Use To High",
+        "please check with with appropriate team to verify admission qualification."
+      );
+    }
+  };
   const calculateTheProbability = (points) => {
     const percentage = Math.floor((points / 250) * 100);
-    setPercentage(percentage)
+    setPercentage(percentage);
+    highAlert();
   };
-
 
   const handleInputChange = (event) => {
     const { name, value, type, checked } = event.target;
     let inputValue;
-
+    // End-stage COPD and Heart failure (ejection fraction <= 40%)
+    if (value === "0") {
+      listDisease.push(value);
+    } else if (value === "65") {
+      listDisease.push(value);
+    } else if (value === "65.01") {
+      listDisease.push(value);
+    }
+    // Severe Diabetes and Chronic Kidney Disease
+    if (value === "0") {
+      listDisease.push(value);
+    } else if (value === "20") {
+      listDisease.push(value);
+    } else if (value === "40.03") {
+      listDisease.push(value);
+    }
+    // Cancer with Severe Malnutrition
+    if (value === "0") {
+      listDisease.push(value);
+    } else if (value === "20.02") {
+      listDisease.push(value);
+    } else if (value === "75") {
+      listDisease.push(value);
+    }
+    //End-Stage Heart Failure and Pulmonary Hypertension
+    if (value === "0") {
+      listDisease.push(value);
+    } else if (value === "40.01") {
+      listDisease.push(value);
+    } else if (value === "65") {
+      listDisease.push(value);
+    }
+    // Severe Alzheimer's Disease and Parkinson's Disease
+    if (value === "0") {
+      listDisease.push(value);
+    } else if (value === "76") {
+      listDisease.push(value);
+    } else if (value === "76.03") {
+      listDisease.push(value);
+    }
+    // Severe Mental Illness and Cardiovascular Disease
+     if (value === "0") {
+       listDisease.push(value);
+     } else if (value === "60") {
+       listDisease.push(value);
+     } else if (value === "76.05") {
+       listDisease.push(value);
+     }
+// End-Stage Chronic Obstructive Pulmonary Disease (COPD) and Coronary Artery Disease
+     if (value === "0") {
+       listDisease.push(value);
+     } else if (value === "30") {
+       listDisease.push(value);
+     } else if (value === "65.01") {
+       listDisease.push(value);
+     }
+    // oxygen use to high Alert
+    if (value === "0") {
+      listDisease.push(value);
+    } else if (value === "30.09") {
+      listDisease.push(value);
+    } 
+    
+    // ----------------End-----------------
     if (type === "checkbox") {
       inputValue = checked;
     } else if (type === "number") {
@@ -144,7 +372,6 @@ function HealthOddsCalculator(props) {
     } else {
       optionValue = value;
     }
-
     setPatientData((prevData) => ({
       ...prevData,
       [name]: optionValue,
@@ -157,34 +384,34 @@ function HealthOddsCalculator(props) {
       }));
     }
   };
+
   const ResetOdds = () => {
     setPatientData(initialState);
     setImprovementOdds(0);
     setAcuityMessage("");
+    setListDisease(originalList);
   };
 
-
   useEffect(() => {
-    if (patientData.stroke === true ) {
+    if (patientData.stroke === true) {
       setMarginBottom("strokeContainerMargin");
     } else if (patientData.tbi === true) {
-       setMarginBottom("strokeContainerMargin");
+      setMarginBottom("strokeContainerMargin");
     } else if (patientData.burns === true) {
-      setMarginBottom("strokeContainerMargin")
+      setMarginBottom("strokeContainerMargin");
     } else if (patientData.ortho === true) {
-      setMarginBottom("strokeContainerMargin")
+      setMarginBottom("strokeContainerMargin");
     } else if (patientData.neuro === true) {
-      setMarginBottom("strokeContainerMargin")
+      setMarginBottom("strokeContainerMargin");
     } else if (patientData.cardiac === true) {
-      setMarginBottom("strokeContainerMargin")
+      setMarginBottom("strokeContainerMargin");
     } else if (patientData.pulmonary === true) {
-      setMarginBottom("strokeContainerMargin")
+      setMarginBottom("strokeContainerMargin");
     } else {
       setMarginBottom("");
     }
-   
-  }, [marginBottom, patientData])
- 
+  }, [marginBottom, patientData, listDisease]);
+
   return (
     <div className={styles["health-odds-calculator"]}>
       <div className={styles.textGuide}>
@@ -235,7 +462,6 @@ function HealthOddsCalculator(props) {
                   value={patientData.motorFunctionStroke}
                   onChange={handleInputChange}
                 >
-                  
                   {MedicalInfo[0].motorFunctions.map((motor) => {
                     return (
                       <CustomOptionInput
@@ -248,7 +474,7 @@ function HealthOddsCalculator(props) {
                   })}
                 </select>
               </div>
-          
+
               <MedicalCondition
                 name="comorbiditiesStroke"
                 comorbidityNum="1"
@@ -270,17 +496,17 @@ function HealthOddsCalculator(props) {
             </div>
             <div className={styles.mainContainer}>
               <SymptonSection
+                className={styles.innerSymptomList}
                 type="checkbox"
-                name="strokeFatigueAndWeaknessValue"
+                data={symptomData[1].stroke.symptoms}
                 onChange={selectOptionChange}
               />
             </div>
             <OtherDiagnositicDependant
-              name={patientData}
+              type="checkbox"
               handleInputChange={handleInputChange}
               selectOptionChange={selectOptionChange}
-              patientData={patientData}
-              value="10"
+              riskData={symptomData[1].stroke.risk}
             />
             <div className={styles.buttonInfoContainer}>
               <Link href={`../disease-info/${props.diseaseInfo[0].id}`}>
@@ -363,17 +589,17 @@ function HealthOddsCalculator(props) {
             />
             <div className={styles.mainContainer}>
               <SymptonSection
+                className={styles.innerSymptomList}
                 type="checkbox"
-                name="strokeFatigueAndWeaknessValue"
+                data={symptomData[2].tbi.symptoms}
                 onChange={selectOptionChange}
               />
             </div>
             <OtherDiagnositicDependant
-              name={patientData}
+              type="checkbox"
               handleInputChange={handleInputChange}
               selectOptionChange={selectOptionChange}
-              patientData={patientData}
-              value="10"
+              riskData={symptomData[2].tbi.risk}
             />
             <div className={styles.buttonInfoContainer}>
               <Link href={`../disease-info/${props.diseaseInfo[1].id}`}>
@@ -456,17 +682,17 @@ function HealthOddsCalculator(props) {
             />
             <div className={styles.mainContainer}>
               <SymptonSection
+                className={styles.innerSymptomList}
                 type="checkbox"
-                name="strokeFatigueAndWeaknessValue"
+                data={symptomData[3].neuro.symptoms}
                 onChange={selectOptionChange}
               />
             </div>
             <OtherDiagnositicDependant
-              name={patientData}
+              type="checkbox"
               handleInputChange={handleInputChange}
               selectOptionChange={selectOptionChange}
-              patientData={patientData}
-              value="10"
+              riskData={symptomData[3].neuro.risk}
             />
             <div className={styles.buttonInfoContainer}>
               <Link href={`../disease-info/${props.diseaseInfo[2].id}`}>
@@ -548,17 +774,17 @@ function HealthOddsCalculator(props) {
             />
             <div className={styles.mainContainer}>
               <SymptonSection
+                className={styles.innerSymptomList}
                 type="checkbox"
-                name="strokeFatigueAndWeaknessValue"
+                data={symptomData[4].ortho.symptoms}
                 onChange={selectOptionChange}
               />
             </div>
             <OtherDiagnositicDependant
-              name={patientData}
+              type="checkbox"
               handleInputChange={handleInputChange}
               selectOptionChange={selectOptionChange}
-              patientData={patientData}
-              value="10"
+              riskData={symptomData[4].ortho.risk}
             />
             <div className={styles.buttonInfoContainer}>
               <Link href={`../disease-info/${props.diseaseInfo[3].id}`}>
@@ -640,17 +866,17 @@ function HealthOddsCalculator(props) {
             />
             <div className={styles.mainContainer}>
               <SymptonSection
+                className={styles.innerSymptomList}
                 type="checkbox"
-                name="strokeFatigueAndWeaknessValue"
+                data={symptomData[5].cardiac.symptoms}
                 onChange={selectOptionChange}
               />
             </div>
             <OtherDiagnositicDependant
-              name={patientData}
+              type="checkbox"
               handleInputChange={handleInputChange}
               selectOptionChange={selectOptionChange}
-              patientData={patientData}
-              value="10"
+              riskData={symptomData[5].cardiac.risk}
             />
             <div className={styles.buttonInfoContainer}>
               <Link href={`../disease-info/${props.diseaseInfo[4].id}`}>
@@ -732,17 +958,17 @@ function HealthOddsCalculator(props) {
             />
             <div className={styles.mainContainer}>
               <SymptonSection
+                className={styles.innerSymptomList}
                 type="checkbox"
-                name="strokeFatigueAndWeaknessValue"
+                data={symptomData[0].pulmonary.symptoms}
                 onChange={selectOptionChange}
               />
             </div>
             <OtherDiagnositicDependant
-              name={patientData}
+              type="checkbox"
               handleInputChange={handleInputChange}
               selectOptionChange={selectOptionChange}
-              patientData={patientData}
-              value="10"
+              riskData={symptomData[0].pulmonary.risk}
             />
             <div className={styles.buttonInfoContainer}>
               <Link href={`../disease-info/${props.diseaseInfo[5].id}`}>
@@ -824,17 +1050,17 @@ function HealthOddsCalculator(props) {
             />
             <div className={styles.mainContainer}>
               <SymptonSection
+                className={styles.innerSymptomList}
                 type="checkbox"
-                name="strokeFatigueAndWeaknessValue"
+                data={symptomData[6].burns.symptoms}
                 onChange={selectOptionChange}
               />
             </div>
             <OtherDiagnositicDependant
-              name={patientData}
+              type="checkbox"
               handleInputChange={handleInputChange}
               selectOptionChange={selectOptionChange}
-              patientData={patientData}
-              value="10"
+              riskData={symptomData[6].burns.risk}
             />
             <div className={styles.buttonInfoContainer}>
               <Link href={`../disease-info/${props.diseaseInfo[6].id}`}>
@@ -847,7 +1073,10 @@ function HealthOddsCalculator(props) {
       </div>
       <div className={styles.buttonContainer}>
         <button
-          className={cls(disable && styles.disabledBtn,!disable && styles.calculateBtn)}
+          className={cls(
+            disable && styles.disabledBtn,
+            !disable && styles.calculateBtn
+          )}
           onClick={calculateHealthOdds}
           disabled={disable}
         >

@@ -1,11 +1,11 @@
-
-
-
 export default function CustomOptionInput(props) {
- 
+  const { value, name } = props;
+
   return (
     <>
-      <option value={props.value} name={props.name}>{props.name}</option>
+      <option value={value} name={name}>
+        {name}
+      </option>
     </>
   );
 }

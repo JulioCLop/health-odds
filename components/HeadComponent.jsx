@@ -10,7 +10,6 @@ import cls from "classnames";
 import Link from "next/link";
 
 function HealthOddsCalculator(props) {
-
   const originalList = [];
   const initialState = {
     stroke: false,
@@ -165,7 +164,6 @@ function HealthOddsCalculator(props) {
     burnsRiskEmotional: 0,
   };
 
-
   const [patientData, setPatientData] = useState(initialState);
   const [improvementOdds, setImprovementOdds] = useState(0);
   const [acuityMessage, setAcuityMessage] = useState("");
@@ -174,6 +172,7 @@ function HealthOddsCalculator(props) {
   const [marginBottom, setMarginBottom] = useState("");
   const [percentage, setPercentage] = useState(0);
   const [listDisease, setListDisease] = useState(originalList);
+  const { alertDataValue, alertDetail, diseaseInfo } = props;
 
   let disable =
     patientData.stroke === false &&
@@ -220,58 +219,50 @@ function HealthOddsCalculator(props) {
       return accumulator + currentValue;
     }, 0);
     if (sum == 130.01) {
-      props.alertDataValue((prevData) => !prevData);
-      props.alertDetail(
+      alertDataValue((prevData) => !prevData);
+      alertDetail(
         "Severe COPD Morbidities",
         "A patient with severe COPD and heart failure with an ejection fraction of < 40% may experience severe shortness of breath, exercise intolerance, and fluid retention, leading to frequent exacerbations and increased hospitalizations. The combination of these conditions can result in a poor prognosis, with a higher mortality rate compared to having each condition separately. Management involves a comprehensive approach, including medications to optimize heart function and manage COPD symptoms, pulmonary rehabilitation, lifestyle modifications, and close monitoring by healthcare professionals."
       );
     } else if (sum == 60.03) {
-    
-      props.alertDataValue((prevData) => !prevData);
-      props.alertDetail(
+      alertDataValue((prevData) => !prevData);
+      alertDetail(
         "Severe Diabetes and Chronic Kidney Disease",
         "Uncontrolled diabetes can lead to kidney damage, and when both conditions are severe, it can result in significant complications like kidney failure and cardiovascular issues."
       );
     } else if (sum == 95.02) {
-     
-      props.alertDataValue((prevData) => !prevData);
-      props.alertDetail(
+      alertDataValue((prevData) => !prevData);
+      alertDetail(
         "Cancer with Severe Malnutrition",
         "Severe malnutrition can worsen the prognosis and treatment outcomes for individuals with advanced cancer, leading to further health deterioration and increased vulnerability to infections."
       );
     } else if (sum == 105.00999999999999) {
-   
-      props.alertDataValue((prevData) => !prevData);
-      props.alertDetail(
+      alertDataValue((prevData) => !prevData);
+      alertDetail(
         "End-Stage Heart Failure and Pulmonary Hypertension",
         "The combination of severe heart failure and pulmonary hypertension creates a challenging situation where the heart struggles to pump blood effectively, and the blood pressure in the lungs is abnormally high, leading to severe breathing difficulties and limited physical capacity."
       );
     } else if (sum == 152.03) {
- 
-   
-      props.alertDataValue((prevData) => !prevData);
-      props.alertDetail(
+      alertDataValue((prevData) => !prevData);
+      alertDetail(
         "Severe Alzheimer's Disease and Parkinson's Disease",
         "Coexistence of severe Alzheimer's and Parkinson's can result in significant cognitive impairment, motor difficulties, and a higher risk of falls and injuries."
       );
     } else if (sum == 136.05) {
-    
-
-      props.alertDataValue((prevData) => !prevData);
-      props.alertDetail(
+      alertDataValue((prevData) => !prevData);
+      alertDetail(
         "Severe Mental Illness and Cardiovascular Disease",
         "Individuals with severe mental illnesses like schizophrenia or bipolar disorder have a higher risk of cardiovascular problems due to lifestyle factors, side effects of medications, and increased stress"
       );
-    }else if (sum == 95.01) {
-    
-      props.alertDataValue((prevData) => !prevData);
-      props.alertDetail(
+    } else if (sum == 95.01) {
+      alertDataValue((prevData) => !prevData);
+      alertDetail(
         "End-Stage Chronic Obstructive Pulmonary Disease (COPD) and Coronary Artery Disease",
         "Severe COPD and coronary artery disease can create a detrimental cycle, where poor lung function strains the heart, and reduced blood flow to the heart further impairs lung function."
       );
-    }else if (sum === 30.09) {
-      props.alertDataValue((prevData) => !prevData);
-      props.alertDetail(
+    } else if (sum === 30.09) {
+      alertDataValue((prevData) => !prevData);
+      alertDetail(
         "Oxygen Use To High",
         "please check with with appropriate team to verify admission qualification."
       );
@@ -283,72 +274,46 @@ function HealthOddsCalculator(props) {
     highAlert();
   };
 
+  function qualifyingValueHelper(
+    list,
+    value,
+    qualify1 = 0,
+    qualify2,
+    qaulify3
+  ) {
+    if (value === qualify1) {
+      list.push(value);
+    } else if (value === qualify2) {
+      list.push(value);
+    } else if (value === qaulify3) {
+      list.push(value);
+    }
+  }
+
   const handleInputChange = (event) => {
     const { name, value, type, checked } = event.target;
     let inputValue;
     // End-stage COPD and Heart failure (ejection fraction <= 40%)
-    if (value === "0") {
-      listDisease.push(value);
-    } else if (value === "65") {
-      listDisease.push(value);
-    } else if (value === "65.01") {
-      listDisease.push(value);
-    }
+    qualifyingValueHelper(listDisease, value, "65", "65.01");
     // Severe Diabetes and Chronic Kidney Disease
-    if (value === "0") {
-      listDisease.push(value);
-    } else if (value === "20") {
-      listDisease.push(value);
-    } else if (value === "40.03") {
-      listDisease.push(value);
-    }
+    qualifyingValueHelper(listDisease, value, "20", "40.03");
     // Cancer with Severe Malnutrition
-    if (value === "0") {
-      listDisease.push(value);
-    } else if (value === "20.02") {
-      listDisease.push(value);
-    } else if (value === "75") {
-      listDisease.push(value);
-    }
+     qualifyingValueHelper(listDisease, value, "20.02", "75");
     //End-Stage Heart Failure and Pulmonary Hypertension
-    if (value === "0") {
-      listDisease.push(value);
-    } else if (value === "40.01") {
-      listDisease.push(value);
-    } else if (value === "65") {
-      listDisease.push(value);
-    }
+     qualifyingValueHelper(listDisease, value, "40", "65");
     // Severe Alzheimer's Disease and Parkinson's Disease
-    if (value === "0") {
-      listDisease.push(value);
-    } else if (value === "76") {
-      listDisease.push(value);
-    } else if (value === "76.03") {
-      listDisease.push(value);
-    }
+     qualifyingValueHelper(listDisease, value, "76", "76.03");
     // Severe Mental Illness and Cardiovascular Disease
-     if (value === "0") {
-       listDisease.push(value);
-     } else if (value === "60") {
-       listDisease.push(value);
-     } else if (value === "76.05") {
-       listDisease.push(value);
-     }
-// End-Stage Chronic Obstructive Pulmonary Disease (COPD) and Coronary Artery Disease
-     if (value === "0") {
-       listDisease.push(value);
-     } else if (value === "30") {
-       listDisease.push(value);
-     } else if (value === "65.01") {
-       listDisease.push(value);
-     }
+     qualifyingValueHelper(listDisease, value, "60", "76.05");
+    // End-Stage Chronic Obstructive Pulmonary Disease (COPD) and Coronary Artery Disease
+    qualifyingValueHelper(listDisease, value, "30", "65.01");
+     qualifyingValueHelper(listDisease, value, "0", "30.09");
     // oxygen use to high Alert
     if (value === "0") {
       listDisease.push(value);
     } else if (value === "30.09") {
       listDisease.push(value);
-    } 
-    
+    }
     // ----------------End-----------------
     if (type === "checkbox") {
       inputValue = checked;
@@ -509,7 +474,7 @@ function HealthOddsCalculator(props) {
               riskData={symptomData[1].stroke.risk}
             />
             <div className={styles.buttonInfoContainer}>
-              <Link href={`../disease-info/${props.diseaseInfo[0].id}`}>
+              <Link href={`../disease-info/${diseaseInfo[0].id}`}>
                 <button>stroke info</button>
               </Link>
             </div>
@@ -602,7 +567,7 @@ function HealthOddsCalculator(props) {
               riskData={symptomData[2].tbi.risk}
             />
             <div className={styles.buttonInfoContainer}>
-              <Link href={`../disease-info/${props.diseaseInfo[1].id}`}>
+              <Link href={`../disease-info/${diseaseInfo[1].id}`}>
                 <button>TBI info</button>
               </Link>
             </div>
@@ -695,7 +660,7 @@ function HealthOddsCalculator(props) {
               riskData={symptomData[3].neuro.risk}
             />
             <div className={styles.buttonInfoContainer}>
-              <Link href={`../disease-info/${props.diseaseInfo[2].id}`}>
+              <Link href={`../disease-info/${diseaseInfo[2].id}`}>
                 <button>Nuero Info</button>
               </Link>
             </div>
@@ -787,7 +752,7 @@ function HealthOddsCalculator(props) {
               riskData={symptomData[4].ortho.risk}
             />
             <div className={styles.buttonInfoContainer}>
-              <Link href={`../disease-info/${props.diseaseInfo[3].id}`}>
+              <Link href={`../disease-info/${diseaseInfo[3].id}`}>
                 <button>Ortho Info</button>
               </Link>
             </div>
@@ -879,7 +844,7 @@ function HealthOddsCalculator(props) {
               riskData={symptomData[5].cardiac.risk}
             />
             <div className={styles.buttonInfoContainer}>
-              <Link href={`../disease-info/${props.diseaseInfo[4].id}`}>
+              <Link href={`../disease-info/${diseaseInfo[4].id}`}>
                 <button>Cardiac Info</button>
               </Link>
             </div>
@@ -971,7 +936,7 @@ function HealthOddsCalculator(props) {
               riskData={symptomData[0].pulmonary.risk}
             />
             <div className={styles.buttonInfoContainer}>
-              <Link href={`../disease-info/${props.diseaseInfo[5].id}`}>
+              <Link href={`../disease-info/${diseaseInfo[5].id}`}>
                 <button>Pulmonary Info</button>
               </Link>
             </div>
@@ -1063,7 +1028,7 @@ function HealthOddsCalculator(props) {
               riskData={symptomData[6].burns.risk}
             />
             <div className={styles.buttonInfoContainer}>
-              <Link href={`../disease-info/${props.diseaseInfo[6].id}`}>
+              <Link href={`../disease-info/${diseaseInfo[6].id}`}>
                 <button>Burns Info</button>
               </Link>
             </div>

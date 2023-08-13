@@ -3,15 +3,16 @@ import comorbidData from "../data/comorbiditiesData";
 import styles from "./MedicalConditions.module.css";
 
 export default function MedicalCondition(props) {
+  const { comorbidityNum, name, patientData, handleInputChange } = props;
   return (
     <div>
       <label>
-        Comorbidities {props.comorbidityNum}:
+        Comorbidities {comorbidityNum}:
         <select
-          name={props.name}
+          name={name}
           className={styles.selectStyles}
-          value={props.patientData}
-          onChange={props.handleInputChange}
+          value={patientData}
+          onChange={handleInputChange}
         >
           {comorbidData.map((comorbidity) => {
             return (
@@ -20,7 +21,6 @@ export default function MedicalCondition(props) {
                 id={comorbidity.id}
                 name={comorbidity.name}
                 value={comorbidity.value}
-             
               />
             );
           })}

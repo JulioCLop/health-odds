@@ -6,12 +6,14 @@ import styles from "./OtherDiagnositcDependants.module.css";
 
 
 export default function OtherDiagnositicDependant(props) {
+  const { riskData, type, selectOptionChange } = props;
+
   return (
     <div className={styles.mainContainer}>
       <hr />
       <h4>Risk Factors:</h4>
       <div className={styles.symptomList}>
-        {props.riskData.map(r => {
+        {riskData.map(r => {
           return (
             <>
               <div className={styles.innerSymptomList}>
@@ -19,9 +21,9 @@ export default function OtherDiagnositicDependant(props) {
                   {r.name}
                   <CustomCheckInput
                     className={styles.symptomDiv}
-                    type={props.type}
+                    type={type}
                     name={r.inputValue}
-                    onChange={props.selectOptionChange}
+                    onChange={selectOptionChange}
                     value={r.value}
                   />
                 </label>

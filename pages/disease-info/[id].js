@@ -18,8 +18,15 @@ export function getStaticProps(staticProps) {
 }
 
 export function getStaticPaths() {
+  const paths = detailInfo.map(info => {
+    return {
+      params: {
+        id: info.id
+      }
+    }
+  })
   return {
-    paths: [{ params: { id: "stroke" } }, { params: { id: "tbi" } }],
+    paths,
     fallback: true,
   };
 }

@@ -4,22 +4,23 @@ import styles from "./SymptonSection.module.css";
 
 
 export const SymptonSection = (props) => {
-  
+  const {data, className, type, onChange} = props;
+
   return (
     <>
       <h4>Symptoms:</h4>
       <div className={styles.symptomList}>
-        {props.data.map((s) => {
+        {data.map((s) => {
           return (
             <>
-              <div className={props.className}>
+              <div className={className}>
                 <label>
                      {s.name}
                   <CustomCheckInput
                     className={styles.symptomStyles}
-                    type={props.type}
+                    type={type}
                     name={s.inputValue}
-                    onChange={props.onChange}
+                    onChange={onChange}
                     value={s.value}
                   />
                 </label>
